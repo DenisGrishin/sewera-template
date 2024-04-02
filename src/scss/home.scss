@@ -1,3 +1,537 @@
-//====================================================================================================
+// =================================================================================================
+// banner
+// =================================================================================================
+a {
+	@media (any-hover: hover) {
+		&:hover {
+			color: $mainColor !important;
+		}
+	}
+}
+.banner {
+	margin-bottom: 40px;
+	@media (max-width: $laptop) {
+		margin-bottom: 35px;
+	}
+	// .banner__wrapper
 
-//====================================================================================================
+	&__wrapper {
+		display: flex;
+		column-gap: 5px;
+		@media (max-width: 1439.98px) {
+			justify-content: space-between;
+		}
+		@media (max-width: $laptop) {
+			flex-direction: column-reverse;
+		}
+	}
+	// .banner__left-blcok
+
+	&__left-blcok {
+		align-self: center;
+		padding: 111px 0;
+		flex: 0 0 77%;
+		max-width: 875px;
+		position: relative;
+		z-index: 222;
+		@media (max-width: $laptop) {
+			margin-top: -20px;
+			padding-top: 0px;
+			padding-bottom: 20px;
+			text-align: center;
+			flex: none;
+			max-width: 100%;
+			align-self: stretch;
+			padding-top: 180px;
+		}
+		@media (max-width: $tablet) {
+			margin-top: 0px;
+			text-align: center;
+			flex: none;
+			max-width: 100%;
+			align-self: stretch;
+		}
+
+		h1 {
+			font-size: 48px;
+			font-size: 34px;
+			font-weight: bold;
+			line-height: 115%;
+
+			margin-bottom: 15px;
+			text-wrap: nowrap;
+			@media (max-width: $laptop) {
+				font-size: 24px;
+			}
+			@media (max-width: $tablet) {
+				text-wrap: wrap;
+			}
+		}
+	}
+
+	// .banner__right
+	&__right {
+		flex: 0 1 35%;
+
+		// @media (max-width: 1439.98px) {
+		// 	text-align: center;
+		// 	flex: 0 1 27%;
+		// }
+		// &::before {
+		// 	@media (max-width: $laptop) {
+		// 		content: "";
+		// 		position: absolute;
+		// 		width: 100%;
+		// 		height: 500px;
+		// 		top: 0;
+		// 		left: 0;
+		// 		overflow: visible;
+		// 		background:
+		// 			url("../img/banner-left-tablet.png") top -83px left -90px / auto no-repeat,
+		// 			url("../img/banner-right-tablet.png") top -200px right -50px / auto no-repeat;
+		// 		@media (max-width: $tablet) {
+		// 			background-position:
+		// 				top -44px left -90px,
+		// 				top -150px right -70px;
+		// 			background-size: 350px auto;
+		// 		}
+
+		// 		@media (max-width: 529.98px) {
+		// 			background-position:
+		// 				top -44px left -70px,
+		// 				top -120px right -75px;
+		// 			background-size: 300px auto;
+		// 		}
+		// 		@media (max-width: $mobileSmall) {
+		// 			background-position:
+		// 				top -14px left -70px,
+		// 				top -80px right -75px;
+		// 			background-size: 250px auto;
+		// 		}
+		// 	}
+		// }
+		// img {
+		// 	width: 120%;
+		// 	height: 100%;
+		// 	@media (max-width: 1440.98px) {
+		// 		@include adaptiveValue("width", 341, 290, 1439.98, 1024, 2);
+		// 		@include adaptiveValue("margin-left", 0, -50, 1439.98, 1024, 2);
+
+		// 		margin-left: -40px;
+		// 		height: 100%;
+		// 	}
+		// 	@media (max-width: $laptop) {
+		// 		display: none;
+		// 	}
+		// }
+	}
+
+	&__text {
+		font-size: 20px;
+		color: $titleOpacityColor;
+		line-height: 145%;
+		margin-bottom: 30px;
+		text-wrap: nowrap;
+		@media (max-width: $laptop) {
+			line-height: 130%;
+			font-size: 16px;
+		}
+		@media (max-width: $tablet) {
+			text-wrap: wrap;
+		}
+	}
+
+	// .banner__form-wrapper
+
+	&__form-wrapper {
+		background-color: #fff;
+		border-radius: 8px;
+		padding: 26px 2.285714285714286%;
+		@media (max-width: $tablet) {
+			max-width: 100%;
+		}
+	}
+	// .baner__form
+	&__form {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width: $laptop) {
+			flex-wrap: wrap;
+			row-gap: 25px;
+		}
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			row-gap: 0px;
+		}
+	}
+
+	// .baner__group
+
+	&__group {
+		text-align: left;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		flex: 0 1 33.333%;
+		border-right: 1px solid #f0f4f9;
+		padding-right: 2.39%;
+		@media (max-width: $laptop) {
+			flex: 0 1 33.33%;
+			padding-right: 20px;
+			border-right: none;
+		}
+		@media (max-width: $tablet) {
+			flex: 0 1 100%;
+			border-right: none;
+			padding-right: 0;
+			margin-bottom: 15px;
+		}
+	}
+	&__group_px {
+		padding: 0 2.39%;
+		@media (max-width: $laptop) {
+			border-right: none;
+			border-left: 1px solid #f0f4f9;
+		}
+		@media (max-width: $tablet) {
+			border: none;
+			padding: 0 0;
+			margin-bottom: 15px;
+		}
+	}
+
+	// .baner__group-placeholder
+
+	&__group-placeholder {
+		font-size: 14px;
+		color: #6f7f87;
+		line-height: 125%;
+	}
+
+	// .baner__group-input
+
+	&__group-input {
+		padding: 3px 3px 1px 3px;
+		border-bottom: 1px solid $mainColor;
+	}
+
+	// .baner__button
+
+	&__button {
+		margin-left: 2.39%;
+		flex: 0 1 33.333%;
+		padding: 15px 2.3%;
+		text-align: center;
+		justify-content: center;
+		position: relative;
+		&::after {
+			content: "";
+			background: url("../img/icons/wrenchIcon.svg") 0 0 no-repeat;
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			top: 50%;
+			right: 14px;
+			transform: translateY(-50%);
+			@media (max-width: $laptop_L) {
+				right: 5px;
+			}
+			@media (max-width: $laptop_L) {
+				position: static;
+				transform: translate(0px, 0px);
+			}
+		}
+		span {
+			text-wrap: nowrap;
+			margin-right: 10px;
+		}
+		@media (max-width: $laptop) {
+			flex: 1 1 100%;
+			margin-left: 0;
+		}
+		@media (max-width: $tablet) {
+			align-self: stretch;
+			margin-top: 10px;
+		}
+	}
+}
+// =========================================================================================
+// tab-pages
+// =========================================================================================
+
+.tab-pages {
+	// .tab-pages__items
+	&__items {
+		display: flex;
+		column-gap: 30px;
+		@media (max-width: $laptop) {
+			flex-wrap: wrap;
+			column-gap: 0;
+			row-gap: 20px;
+			margin: 0 -15px;
+		}
+	}
+	&__wrapper-item {
+		flex: 0 1 25%;
+		@media (max-width: $laptop) {
+			flex: 0 1 50%;
+			padding: 0 15px;
+		}
+	}
+	// .tab-pages__item
+
+	&__item {
+		font-weight: 700;
+		line-height: 1.15;
+		padding: 20px 7.114624505928854%;
+		border-radius: $borRadiusSmall;
+		text-align: center;
+		&._active-page {
+			color: #fff !important;
+			background-color: $mainColor !important;
+		}
+	}
+}
+
+// =================================================================================================
+// choose-us
+// =================================================================================================
+.choose-us {
+	// .choose-us__items
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: 30px;
+		margin: 0 -15px;
+		@media (max-width: $laptop) {
+			row-gap: 20px;
+		}
+		@media (max-width: $tablet) {
+			row-gap: 15px;
+		}
+		@media (max-width: $mobileSmall) {
+			margin: 0;
+		}
+	}
+	&__wrapper-item {
+		flex: 0 1 33.333%;
+		padding: 0 15px;
+		@media (max-width: $laptop) {
+			flex: 1 1 50%;
+			padding: 0 8px;
+		}
+		@media (max-width: $tablet) {
+			flex: 1 1 100%;
+		}
+		@media (max-width: $mobileSmall) {
+			padding: 0;
+		}
+	}
+	// .choose-us__item
+
+	&__item {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		column-gap: 30px;
+		background-color: $bgColor;
+		padding: 20px;
+		border-radius: 8px;
+
+		@media (max-width: $tablet) {
+			flex: 0 1 50%;
+		}
+	}
+
+	// .choose-us__icon
+
+	&__icon {
+		flex: 0 0 60px;
+		height: 60px;
+		background-color: #fff;
+		padding: 12px;
+		position: relative;
+		border-radius: 4px;
+		svg {
+			padding: 1px;
+			width: 32px;
+			height: 32px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		@media (max-width: $tablet) {
+		}
+	}
+
+	// .choose-us__description
+
+	&__description {
+		line-height: 150%;
+		font-weight: 700;
+	}
+}
+
+// =================================================================================================
+// septic-service
+// =================================================================================================
+
+.septic-service {
+	// .septic-service__body
+
+	&__body {
+		padding: 40px;
+		border-radius: 8px;
+		display: flex;
+		justify-content: space-between;
+		gap: 40px;
+		@media (max-width: $laptop) {
+			flex-direction: column-reverse;
+			padding: 30px;
+		}
+	}
+
+	// .septic-service__left
+
+	&__left {
+		flex: 0 1 69%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+	// .septic-service__right
+
+	&__right {
+		flex: 0 1 320px;
+		position: relative;
+		padding-bottom: 42.5%;
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			border-radius: $borRadiusSmall;
+		}
+		@media (max-width: $laptop) {
+			height: 320px;
+		}
+	}
+	// .septic-service__block
+
+	&__block {
+		&:first-child {
+			margin-bottom: 30px;
+		}
+	}
+
+	// .septic-service__sub-title
+
+	&__sub-title {
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 150%;
+		margin-bottom: 20px;
+	}
+
+	// .septic-service__items
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+
+	// .septic-service__item
+
+	&__item {
+		background-color: #fff;
+		padding: 5px 10px;
+		border-radius: $borRadiusSmall;
+		line-height: 150%;
+	}
+
+	// .septic-service__btn
+
+	&__btn {
+		position: relative;
+		margin-top: 40px;
+		background-color: $colorGreen;
+		color: #fff;
+		font-weight: 700;
+		line-height: 115%;
+		padding: 16px 39px 16px 20px;
+		border-radius: $borRadiusSmall;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 20px;
+			transform: translateY(-50%);
+			width: 11px;
+			height: 11px;
+			background: url("../img/icons/arrow-btn.svg") center no-repeat;
+		}
+	}
+	&__price {
+		color: #6f7f87;
+	}
+}
+.popular-services__accordion {
+	margin-top: 30px;
+	padding: 20px;
+	border-radius: 4px;
+	@media (max-width: $tablet) {
+		padding: 14px;
+		margin-top: 20px;
+	}
+}
+.popular-services__accordion-header {
+	display: flex;
+	align-items: center;
+	column-gap: 12px;
+	font-size: 14px;
+	@media (max-width: $tablet) {
+		column-gap: 4px;
+	}
+}
+.popular-services__accordion-body {
+	margin-top: 15px;
+	font-size: 14px;
+	line-height: 125%;
+}
+
+.popular-services__accordion-header__text {
+	flex: 1 1 100%;
+}
+
+.popular-services__accordion__button {
+	transition: all 0.3s ease 0s;
+}
+._spoller-active .popular-services__accordion__button {
+	@media (max-width: $tablet) {
+		transform: rotate(-180deg);
+	}
+}
+
+.mobile-show-content-split {
+	@media (min-width: $tablet) {
+		display: none;
+	}
+}
+.pc-show-content-split {
+	@media (max-width: $tablet) {
+		display: none;
+	}
+}
+
+._arrow-hidden-accorion {
+	&::after {
+		display: none;
+	}
+}
