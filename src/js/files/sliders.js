@@ -62,10 +62,7 @@ function initSliders() {
       slidesPerView: 1,
       spaceBetween: 0,
       speed: 800,
-      navigation: {
-        nextEl: '.about__more .more__item_next',
-        prevEl: '.about__more .more__item_prev',
-      },
+
       autoplay: true,
 
       breakpoints: {
@@ -74,7 +71,6 @@ function initSliders() {
         },
         430: {
           slidesPerView: 1.4,
-
           autoplay: {
             delay: 3000,
           },
@@ -97,38 +93,11 @@ function initSlidersScroll() {
   // Добавление классов слайдера
   // при необходимости отключить
   bildSliders();
-
-  let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
-  if (sliderScrollItems.length > 0) {
-    for (let index = 0; index < sliderScrollItems.length; index++) {
-      const sliderScrollItem = sliderScrollItems[index];
-      const sliderScrollBar =
-        sliderScrollItem.querySelector('.swiper-scrollbar');
-      const sliderScroll = new Swiper(sliderScrollItem, {
-        observer: true,
-        observeParents: true,
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        freeMode: {
-          enabled: true,
-        },
-        scrollbar: {
-          el: sliderScrollBar,
-          draggable: true,
-          snapOnRelease: false,
-        },
-        mousewheel: {
-          releaseOnEdges: true,
-        },
-      });
-      sliderScroll.scrollbar.updateSize();
-    }
-  }
 }
 
-window.addEventListener('load', function (e) {
-  // Запуск инициализации слайдеров
-  initSliders();
-  // Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
-  //initSlidersScroll();
+document.addEventListener('DOMContentLoaded', () => {
+  const width = window.innerWidth;
+  if (width < 768) {
+    initSliders();
+  }
 });

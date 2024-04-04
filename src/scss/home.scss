@@ -9,6 +9,7 @@ a {
 	}
 }
 .banner {
+	border-radius: 8px;
 	margin-bottom: 40px;
 	position: relative;
 	z-index: 0;
@@ -96,7 +97,7 @@ a {
 	&__form-wrapper {
 		background-color: #fff;
 		border-radius: 8px;
-		padding: 26px 2.285714285714286%;
+
 		@media (max-width: $tablet) {
 			max-width: 100%;
 		}
@@ -106,6 +107,7 @@ a {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		padding: 23px 2.285714285714286% !important;
 		@media (max-width: $laptop) {
 			flex-wrap: wrap;
 			row-gap: 25px;
@@ -116,92 +118,27 @@ a {
 		}
 	}
 
-	// .baner__group
-
-	&__group {
-		text-align: left;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		flex: 0 1 33.333%;
-		border-right: 1px solid #f0f4f9;
-		padding-right: 2.39%;
-		@media (max-width: $laptop) {
-			flex: 0 1 33.33%;
-			padding-right: 20px;
-			border-right: none;
-		}
-		@media (max-width: $tablet) {
-			flex: 0 1 100%;
-			border-right: none;
-			padding-right: 0;
-			margin-bottom: 15px;
-		}
-	}
-	&__group_px {
-		padding: 0 2.39%;
-		@media (max-width: $laptop) {
-			border-right: none;
-			border-left: 1px solid #f0f4f9;
-		}
-		@media (max-width: $tablet) {
-			border: none;
-			padding: 0 0;
-			margin-bottom: 15px;
-		}
-	}
-
-	// .baner__group-placeholder
-
-	&__group-placeholder {
-		font-size: 14px;
-		color: #6f7f87;
-		line-height: 125%;
-	}
-
-	// .baner__group-input
-
-	&__group-input {
-		border-bottom: none !important;
-	}
-
 	// .baner__button
 
 	&__button {
 		margin-left: 2.39%;
 		flex: 0 0 202px;
-		// padding: 15px 2.3%;
-
 		padding: 15px 20px;
 
 		text-align: center;
-		justify-content: center;
+		justify-content: space-between;
 		position: relative;
-		&::after {
-			content: "";
-			background: url("../img/icons/wrenchIcon.svg") 0 0 no-repeat;
-			position: absolute;
-			width: 25px;
-			height: 25px;
-			top: 50%;
-			right: 14px;
-			transform: translateY(-50%);
-			@media (max-width: $laptop_L) {
-				right: 5px;
-			}
-			@media (max-width: $laptop_L) {
-				position: static;
-				transform: translate(0px, 0px);
-			}
-		}
 
 		span {
+			text-transform: none;
+			font-size: 16px;
 			text-wrap: nowrap;
 			margin-right: 10px;
 		}
 		@media (max-width: $laptop) {
 			flex: 1 1 100%;
 			margin-left: 0;
+			justify-content: center;
 		}
 		@media (max-width: $tablet) {
 			align-self: stretch;
