@@ -16,119 +16,80 @@ function bildSliders() {
 
 function initSliders() {
   bildSliders();
-  if (document.querySelector('.we-doing__slider')) {
-    new Swiper('.we-doing__slider', {
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const width = window.innerWidth;
+    if (width < 768) {
+      if (document.querySelector('.slider-septic__slider')) {
+        new Swiper('.slider-septic__slider', {
+          observer: true,
+          observeParents: true,
+          slidesPerView: 1,
+          spaceBetween: 0,
+          speed: 800,
+
+          autoplay: true,
+
+          breakpoints: {
+            320: {
+              slidesPerView: 1.2,
+            },
+            430: {
+              slidesPerView: 1.4,
+              autoplay: {
+                delay: 3000,
+              },
+            },
+            768: {
+              autoplay: false,
+            },
+            992: {
+              slidesPerView: 1,
+
+              autoplay: false,
+            },
+          },
+          on: {},
+        });
+      }
+    }
+  });
+  if (document.querySelector('.so-discount__slider')) {
+    new Swiper('.so-discount__slider', {
       observer: true,
       observeParents: true,
-      slidesPerView: 4,
-      spaceBetween: 25,
+      slidesPerView: 3,
+      spaceBetween: 30,
       autoHeight: false,
       speed: 800,
-      loop: true,
-      autoplay: {
-        delay: 3000,
-      },
-      // Arrows
-      navigation: {
-        nextEl: '.slider-navigation .slider-navigation-next',
-        prevEl: '.slider-navigation .slider-navigation-prev',
+      pagination: {
+        el: '.so-discount__pagging',
+        clickable: true,
       },
 
       breakpoints: {
         319.98: {
           slidesPerView: 1.1,
-          spaceBetween: 15,
-          centeredSlides: true,
+          spaceBetween: 30,
         },
-        429.98: { slidesPerView: 1.1 },
+        429.98: { slidesPerView: 1.28 },
 
         767.98: {
-          slidesPerView: 2.3,
-          spaceBetween: 15,
+          slidesPerView: 2.25,
+          spaceBetween: 30,
         },
-        1023.98: { slidesPerView: 3, spaceBetween: 20 },
-        1439.98: {
-          spaceBetween: 24,
-        },
+        1023.98: { slidesPerView: 3 },
       },
 
-      on: {},
-    });
-  }
-  if (document.querySelector('.slider-septic__slider')) {
-    new Swiper('.slider-septic__slider', {
-      observer: true,
-      observeParents: true,
-      slidesPerView: 1,
-      spaceBetween: 0,
-      speed: 800,
-      navigation: {
-        nextEl: '.about__more .more__item_next',
-        prevEl: '.about__more .more__item_prev',
-      },
-      autoplay: true,
-
-      breakpoints: {
-        320: {
-          slidesPerView: 1.2,
-        },
-        430: {
-          slidesPerView: 1.4,
-
-          autoplay: {
-            delay: 3000,
-          },
-        },
-        768: {
-          autoplay: false,
-        },
-        992: {
-          slidesPerView: 1,
-
-          autoplay: false,
-        },
-      },
       on: {},
     });
   }
 }
+
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
+initSliders();
 function initSlidersScroll() {
   // Добавление классов слайдера
   // при необходимости отключить
   bildSliders();
-
-  let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
-  if (sliderScrollItems.length > 0) {
-    for (let index = 0; index < sliderScrollItems.length; index++) {
-      const sliderScrollItem = sliderScrollItems[index];
-      const sliderScrollBar =
-        sliderScrollItem.querySelector('.swiper-scrollbar');
-      const sliderScroll = new Swiper(sliderScrollItem, {
-        observer: true,
-        observeParents: true,
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        freeMode: {
-          enabled: true,
-        },
-        scrollbar: {
-          el: sliderScrollBar,
-          draggable: true,
-          snapOnRelease: false,
-        },
-        mousewheel: {
-          releaseOnEdges: true,
-        },
-      });
-      sliderScroll.scrollbar.updateSize();
-    }
-  }
 }
-
-window.addEventListener('load', function (e) {
-  // Запуск инициализации слайдеров
-  initSliders();
-  // Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
-  //initSlidersScroll();
-});

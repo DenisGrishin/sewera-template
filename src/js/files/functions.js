@@ -89,17 +89,6 @@ export function spollers() {
     if (spollersRegular.length) {
       initSpollers(spollersRegular);
     }
-    // Получение слойлеров с медиа запросами
-    let mdQueriesArray = dataMediaQueries(spollersArray, 'spollers');
-    if (mdQueriesArray && mdQueriesArray.length) {
-      mdQueriesArray.forEach((mdQueriesItem) => {
-        // Событие
-        mdQueriesItem.matchMedia.addEventListener('change', function () {
-          initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
-        });
-        initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
-      });
-    }
 
     // Инициализация
     function initSpollers(spollersArray, matchMedia = false) {
