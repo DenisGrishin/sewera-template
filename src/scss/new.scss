@@ -1,0 +1,27 @@
+.water-treatment-bg-img {
+	background-repeat: no-repeat;
+	background-position: bottom 0px right -70px;
+	background-size: 472px auto;
+}
+@media (max-width: 1279.98px) {
+	.water-treatment-bg-img {
+		background-position: bottom -30px right -40px;
+		background-size: 432px auto;
+	}
+}
+@media (max-width: 1023.98px) {
+	.water-treatment-bg-img {
+		background-position: center bottom 130px;
+		background-size: 338px auto;
+	}
+}
+@media (max-width: 767.98px) {
+	.water-treatment-bg-img {
+		background-position: center top 170px;
+	}
+}
+
+//=========== estb
+.banner__text_text-wrap {
+	text-wrap: wrap !important;
+}
