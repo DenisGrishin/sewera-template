@@ -1,0 +1,35 @@
+.lawn-care-bg-img {
+	background-repeat: no-repeat;
+	background-position: bottom 0px right 0px;
+	background-size: 527px auto;
+}
+@media (max-width: 1279.98px) {
+	.lawn-care-bg-img {
+		background-size: 432px auto;
+	}
+}
+@media (max-width: 1023.98px) {
+	.lawn-care-bg-img {
+		background-position: top 100px center;
+
+		background-size: 238px auto;
+	}
+}
+@media (max-width: 767.98px) {
+	.lawn-care-bg-img {
+		background-position: top 114px center;
+
+		background-size: 280px auto;
+	}
+}
+@media (max-width: 429.98px) {
+	.lawn-care-bg-img {
+		background-position: top 135px center;
+
+		background-size: 280px auto;
+	}
+}
+//=========== estb
+.banner__text_text-wrap {
+	text-wrap: wrap !important;
+}
