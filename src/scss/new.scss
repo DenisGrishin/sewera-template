@@ -1,0 +1,33 @@
+.automatic-water-bg-img {
+	background-repeat: no-repeat;
+	background-position: bottom -160px right -20px;
+	background-size: 610px auto;
+}
+@media (max-width: 1279.98px) {
+	.automatic-water-bg-img {
+		background-position: bottom -200px right -220px;
+		background-size: 590px auto;
+	}
+}
+@media (max-width: 1023.98px) {
+	.automatic-water-bg-img {
+		background-position: center bottom 35px;
+		background-size: 417px auto;
+	}
+}
+@media (max-width: 767.98px) {
+	.automatic-water-bg-img {
+		background-position: center top 75px;
+		background-size: 417px auto;
+	}
+}
+@media (max-width: 429.98px) {
+	.automatic-water-bg-img {
+		background-position: center top 175px;
+		background-size: 320px auto;
+	}
+}
+//=========== estb
+.banner__text_text-wrap {
+	text-wrap: wrap !important;
+}
