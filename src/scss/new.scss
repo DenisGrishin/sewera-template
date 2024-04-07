@@ -32,6 +32,30 @@
 	}
 }
 //=========== estb
+.tab-pages__wrapper-item {
+	color: #102938 !important;
+}
 .banner__text_text-wrap {
 	text-wrap: wrap !important;
+}
+.we-doing__description_small-mb {
+	margin-bottom: 24px !important;
+}
+.we-doing__img {
+	margin-bottom: 24px;
+	position: relative;
+	padding-bottom: 87.33624454148472%;
+	img {
+		border-radius: 4px;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+.spollers__btn-order_none-hover {
+	color: #009cd9 !important;
 }
