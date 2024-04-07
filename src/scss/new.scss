@@ -20,10 +20,14 @@
 		background-position: center top 170px;
 	}
 }
-.service-block__texts_wide {
-	flex: 1 1 100% !important;
+.tab-pages__wrapper-item-full-row {
+	flex: 1 1 25% !important;
 }
+
 //=========== estb
+.tab-pages__wrapper-item {
+	color: #102938 !important;
+}
 .banner__text_text-wrap {
 	text-wrap: wrap !important;
 }

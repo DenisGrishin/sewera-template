@@ -1465,5 +1465,39 @@ h6 {
 .service-block__text_fw-sb {
 	font-weight: 600;
 }
-
+.tab-pages__wrapper-item-full-row {
+	flex: 1 1 100%;
+}
 /*========= */
+.tab-pages__items {
+	display: flex;
+	column-gap: 30px;
+}
+@media (max-width: 1023.98px) {
+	.tab-pages__items {
+		flex-wrap: wrap;
+		column-gap: 0;
+		row-gap: 20px;
+		margin: 0 -15px;
+	}
+}
+.tab-pages__wrapper-item {
+	flex: 0 1 25%;
+}
+@media (max-width: 1023.98px) {
+	.tab-pages__wrapper-item {
+		flex: 0 1 50%;
+		padding: 0 15px;
+	}
+}
+.tab-pages__item {
+	font-weight: 700;
+	line-height: 1.15;
+	padding: 20px 7.1146245059%;
+	border-radius: 4px;
+	text-align: center;
+}
+.tab-pages__item._active-page {
+	color: #fff !important;
+	background-color: #102938 !important;
+}
