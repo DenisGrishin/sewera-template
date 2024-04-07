@@ -34,7 +34,9 @@
 		list-style: disc !important;
 	}
 }
-
+.service-block__title_flex-wide {
+	flex: 1 1 70% !important;
+}
 /*!======================== estb */
 .banner__text_text-wrap {
 	text-wrap: wrap !important;
