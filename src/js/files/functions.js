@@ -1,4 +1,21 @@
-// Вспомогательные модули плавного расскрытия и закрытия объекта ======================================================================================================================================================================
+export function isWebp() {
+  // Проверка поддержки webp
+  function testWebP(callback) {
+    let webP = new Image();
+    webP.onload = webP.onerror = function () {
+      callback(webP.height == 2);
+    };
+    webP.src =
+      'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+  }
+  // Добавление класса _webp или _no-webp для HTML
+  testWebP(function (support) {
+    let className = support === true ? 'webp' : 'no-webp';
+    document.documentElement.classList.add(className);
+  });
+}
+
+// Вспомогательные модули плавного расскрытия и закрытия объекта в этом слчае для спойлера(Аркадеон) ======================================================================================================================================================================
 export let _slideUp = (target, duration = 500, showmore = 0) => {
   if (!target.classList.contains('_slide')) {
     target.classList.add('_slide');
@@ -138,8 +155,9 @@ export function spollers() {
             hideSpollersBody(spollersBlock);
           }
           spollerTitle.classList.toggle('_spoller-active');
-          _slideToggle(spollerTitle.nextElementSibling, 500);
+          _slideToggle(spollerTitle.nextElementSibling, 300);
         }
+
         e.preventDefault();
       }
     }
@@ -149,8 +167,10 @@ export function spollers() {
       );
       if (spollerActiveTitle) {
         spollerActiveTitle.classList.remove('_spoller-active');
-        _slideUp(spollerActiveTitle.nextElementSibling, 500);
+        _slideUp(spollerActiveTitle.nextElementSibling, 300);
       }
     }
   }
 }
+
+//================================================================================================================================================================================================================================================================================================================

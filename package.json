@@ -2,9 +2,9 @@
 	"name": "konoha",
 	"version": "1.0.0",
 	"description": "Start template with Gulp and Webpack",
-	"author": "a",
+	"author": "S",
 	"private": true,
-	"license": "a",
+	"license": "#",
 	"type": "module",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
